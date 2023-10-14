@@ -1,0 +1,269 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: #242424;
+  font-family: sans-serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.corPrimaria {
+  color: #868f3b;
+}
+
+#logo-home {
+  width: 120px;
+  padding: 20px;
+  margin-left: 25px;
+  margin-top: 5px;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+}
+.menu {
+  display: flex;
+  width: 60%;
+  align-items: center;
+  background-color: #ff914d21;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: px;
+}
+
+.menu-item {
+  font-family: "Changa", sans-serif;
+  font-size: 19px;
+  list-style: none;
+  display: inline;
+  padding: 50px;
+}
+.menu-item:hover {
+  font-family: "Changa", sans-serif;
+  font-size: 18px;
+  list-style: none;
+  display: inline;
+  padding: 50px;
+  color: #ff914dd5;
+}
+.logo {
+  display: flex;
+  width: 40%;
+}
+
+.h1-home {
+  font-size: 105px;
+  line-height: 1;
+  margin-bottom: 20px;
+  margin-top: 150px;
+  margin-left: 80px;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
+  display: block;
+  background-color: white;
+}
+
+.container {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#section-1 {
+  flex-direction: column;
+  transition: 2s;
+  display: flex;
+  justify-content: start;
+}
+
+#line {
+  height: 2px;
+  width: 425px;
+  background-color: #000000;
+  margin-left: 80px;
+}
+
+.h2-home {
+  display: block;
+  font-variant-caps: all-petite-caps;
+  margin-top: 20px;
+  margin-left: 80px;
+}
+
+.bt-adopt {
+  width: 280px;
+  height: 50px;
+  font-size: 20px;
+  background: none;
+  color: #000000;
+  border: 1px solid #868f3b;
+  border-radius: 0;
+  margin-left: 80px;
+  z-index: 80;
+  transition: 1s;
+}
+
+.bt-adopt:hover {
+  width: 280px;
+  height: 50px;
+  font-size: 20px;
+  background-color: #868f3b;
+  color: #ffffff;
+  border: none;
+  margin-left: 80px;
+  z-index: 80;
+}
+#section-2 {
+  display: flex;
+  align-items: start;
+  z-index: 5;
+}
+#section-2::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 8;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #000000 100%);
+}
+
+.box-2 {
+  width: 50%;
+  z-index: 100;
+}
+
+#breedCatImg {
+  width: 700px;
+  height: 500px;
+  border: 4px solid #ffffffd5;
+  margin-top: 100px;
+  border-radius: 40% 20%;
+}
+
+#breedBtn {
+  font-family: "Changa", sans-serif;
+  font-size: 20px;
+  background-color: #ff914dd5;
+  color: rgb(238, 209, 197);
+  border-color: rgb(238, 209, 197);
+  width: 200px;
+  height: 50px;
+  z-index: 90;
+  transition: 1s;
+}
+#breedBtn:hover {
+  font-family: "Changa", sans-serif;
+  font-size: 20px;
+  color: #ff914dd5;
+  border-color: #ff914dd5;
+  background-color: rgb(238, 209, 197);
+  width: 200px;
+  height: 50px;
+  z-index: 90;
+}
+
+#h2-rdm-cat1 {
+  font-size: 105px;
+  color: #ff914dd5;
+  margin-left: 80px;
+  line-height: 1;
+}
+#h2-rdm-cat2 {
+  font-size: 105px;
+  color: #ff914dd5;
+  margin-left: 255px;
+  line-height: 0.8;
+}
+
+#h2-rdm-cat3 {
+  font-size: 105px;
+  color: black;
+  margin-left: 515px;
+  line-height: 1;
+}
+
+#box-text {
+  display: flex;
+  justify-content: start;
+}
+
+#section-3 {
+  display: flex;
+  z-index: 50;
+}
+
+.box-3 {
+  width: 50%;
+  z-index: 50;
+}
+
+section.module:last-child {
+  margin-bottom: 0;
+}
+section.module h2 {
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+section.module.content {
+  padding: px 0;
+  background-color: #ff914d21;
+  text-align: center;
+}
+
+section.module.parallax {
+  display: flex;
+  justify-content: center;
+  height: 100vh !important;
+  width: 100%;
+  position: relative;
+  background-position: 50% 50%;
+}
+
+section.module.parallax::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 8;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #000000 100%);
+}
+
+section.module.parallax-1 {
+  background-image: url("img/Reception\ Prgram.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+section.module.parallax-2 {
+  background-image: url("img/bgteste2.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+section.module.parallax-3 {
+  background-image: url("img/bgGato3.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+section.module.parallax {
+  color: #fff;
+  font-size: 78px;
+  z-index: 1;
+}
+
+.area-1,
+.area-2,
+.area-3 {
+  visibility: hidden;
+  font-family: "Changa", sans-serif;
+}
