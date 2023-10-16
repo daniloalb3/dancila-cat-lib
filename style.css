@@ -174,7 +174,7 @@ main {
   font-size: 105px;
   color: #ff914dd5;
   margin-left: 80px;
-  line-height: 1;
+  line-height: 0.8;
 }
 #h2-rdm-cat2 {
   font-size: 105px;
@@ -187,7 +187,7 @@ main {
   font-size: 105px;
   color: black;
   margin-left: 515px;
-  line-height: 1;
+  line-height: 0.8;
 }
 
 #box-text {
@@ -201,8 +201,125 @@ main {
 }
 
 .box-3 {
+  display: flex;
+  flex-direction: column;
   width: 50%;
   z-index: 50;
+  align-items: center;
+  line-height: 0.5;
+}
+
+#breedSelect {
+  width: 200px;
+  height: 36px;
+  font-family: "Changa", sans-serif;
+  font-size: 18px;
+  z-index: 55;
+  margin-top: 20px;
+}
+
+#breed-search-title {
+  font-family: "Changa", sans-serif;
+  line-height: 1;
+  font-size: 100px;
+  margin-top: 50px;
+}
+
+#findBtn {
+  width: 100px;
+  height: 30px;
+  margin-top: 20px;
+}
+
+.imageByBreed {
+  width: 600px;
+  height: 400px;
+  margin-top: 100px;
+}
+
+#origin {
+  width: 200px;
+  height: 20px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.originAdd {
+  font-family: "Changa", sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  background-color: #0000003c;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  padding: 10px;
+}
+.lfAdd {
+  font-family: "Changa", sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  background-color: #0000003c;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+#lifeSpan {
+  width: 200px;
+  height: 20px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#temperament {
+  width: 600px;
+  height: 30px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.detalhes {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.tpmAdd {
+  font-family: "Changa", sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  background-color: #0000003c;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  padding: 10px;
+}
+
+#description {
+  max-height: 200px;
+  width: 580px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.descriptionAdd {
+  font-family: "Changa", sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  background-color: #0000003c;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.sColor {
+  color: rgb(234, 208, 15);
+  font-weight: bold;
 }
 
 section.module:last-child {
@@ -249,7 +366,7 @@ section.module.parallax-2 {
   background-size: cover;
 }
 section.module.parallax-3 {
-  background-image: url("img/bgGato3.png");
+  background-image: url("img/bg33.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

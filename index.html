@@ -49,7 +49,7 @@
                   <p id="h2-rdm-cat2" class="area-1" style="text-align: left;">a Little</p>
                   <p id="h2-rdm-cat3" class="area-1"  style="text-align: left;">Kitten.</p>
               </div> 
-            <div id="breed-box" class="box-2 area-1">
+            <div id="breed-box" class="box-2 ">
             <img id="breedCatImg" src="img/gato-zinca-laranja.jpg"> <br>
              <button id="breedBtn">Match</button> 
             </div> 
@@ -65,7 +65,7 @@
               <section id="section-3" class="module parallax parallax-3">
                
                 <div class="box-3">
-                  <h1>Encontre um gato por raça</h1>
+                 <p id="breed-search-title" class="area-2">Find a Cat <br> By Breed</p>
                   <select id="breedSelect">
                     <option value="Abyssinian">Abyssinian</option>
                     <option value="Aegean">Aegean</option>
@@ -135,11 +135,21 @@
                                   
                     <!-- Adicione mais opções conforme necessário -->
                   </select>
-                  <button onclick="getCatBySelectedBreed()">Buscar</button><br>
-                  <div id="catImage"></div>
+                  <button id="findBtn" onclick="getCatBySelectedBreed(), getCatBySelectedBreedDcp(), getCatBySelectedBreedOrg(),getCatBySelectedBreedSpn(), getCatBySelectedBreedTpm()">Search</button><br>
+                  
+                  
             
                 </div>
-
+                <div class="box-3">
+                  <div id="catImage"></div>
+                  <div class="detalhes">
+                  <div id="origin"></div>
+                  <div id="lifeSpan"></div>
+                </div>
+                  <div id="temperament"></div>
+                  <div id="description"></div>
+                
+              </div>
 
               </section>
 
