@@ -277,6 +277,163 @@ async function getCatBySelectedBreedDcp() {
   }
 }
 
+//? script para MATCHINGMAKE search
+
+async function matchingBreed() {
+  const arr = [
+    "Abyssinian",
+    "Aegean",
+    "American Bobtail",
+    "American Shorthair",
+    "American Wirehair",
+    "Arabian Mau",
+    "Australian Mist",
+    "Balinese",
+    "Bambino",
+    "Bengal",
+    "Birman",
+    "Bombay",
+    "British Longhair",
+    "British Shorthair",
+    "Burmese",
+    "Burmilla",
+    "California Spangled",
+    "Chantilly-Tiffany",
+    "Chartreux",
+    "Chausie",
+    "Cheetoh",
+    "Colorpoint Shorthair",
+    "Cornish Rex",
+    "Cymric",
+    "Cyprus",
+    "Devon Rex",
+    "Dragon Li",
+    "Egyptian Mau",
+    "European Burmese",
+    "DonExotic Shorthairskoy",
+    "Havana Brown",
+    "Himalayan",
+    "Japanese Bobtail",
+    "Javanese",
+    "Khao Manee",
+    "Korat",
+    "Kurilian",
+    "LaPerm",
+    "Maine Coon",
+    "Manx",
+    "Munchkin",
+    "Nebelung",
+    "Norwegian Forest Cat",
+    "Ocicat",
+    "Oriental",
+    "Persian",
+    "Pixie-bob",
+    "Ragamuffin",
+    "Ragdoll",
+    "Russian Blue",
+    "Savannah",
+    "Scottish Fold",
+    "Selkirk Rex",
+    "Siamese",
+    "Siberian",
+    "Singapura",
+    "Snowshoe",
+    "Somali",
+    "Sphynx",
+    "Tonkinese",
+    "Toyger",
+    "Turkish Angora",
+    "Turkish Van",
+    "York Chocolate",
+  ];
+
+  const numeroMin = 0;
+  const numeroMax = 63;
+
+  const numeroSort =
+    Math.floor(Math.random() * (numeroMax - numeroMin + 1)) + numeroMin;
+
+  const breedRdn = arr[numeroSort];
+
+  const rdnBreedContainer = document.getElementById("match");
+  const rdnBreedContainer2 = document.getElementById("matchName");
+  const rdnBreedContainer3 = document.getElementById("yourMatchIs");
+  const rdnBreedContainer4 = document.getElementById("yourMatchIsName");
+
+  // Limpa o contêiner de imagem anterior
+  rdnBreedContainer.innerHTML = "";
+  rdnBreedContainer2.innerHTML = "";
+  rdnBreedContainer3.innerHTML = "";
+  rdnBreedContainer4.innerHTML = "";
+
+  const apiKey =
+    "live_E1jfL2jOplvaEQanE0nQBvyfQrIYJoS3TvjxczEaJuULrTbMyf71aFuA7ZrYUztA";
+
+  // Busca a lista de todas as raças
+  const breedListUrl = "https://api.thecatapi.com/v1/breeds";
+
+  const response = await fetch(breedListUrl, {
+    headers: {
+      "x-api-key": apiKey,
+    },
+  });
+
+  const breeds = await response.json();
+
+  // Procura o ID da raça com base no nome
+  const breed = breeds.find((b) => b.name === breedRdn);
+
+  if (breed) {
+    const breedId = breed.id;
+    const apiUrl = `https://api.thecatapi.com/v1/images/search?breed_ids=${breedId}`;
+
+    // Busca uma imagem do gato com base na raça selecionada
+    const imageResponse = await fetch(apiUrl, {
+      headers: {
+        "x-api-key": apiKey,
+      },
+    });
+
+    const data = await imageResponse.json();
+
+    if (data.length > 0) {
+      const catImageUrl = data[0].url;
+      const imageElement = document.createElement("img");
+      imageElement.src = catImageUrl;
+      imageElement.alt = "Gato da raça selecionada";
+      imageElement.classList.add("yourMatchIsImg");
+
+      rdnBreedContainer.appendChild(imageElement);
+    }
+    if (data.length > 0) {
+      const catNameFilter = data[0].breeds;
+      const catName = catNameFilter[0].name;
+      const nameElement = document.createElement("p");
+      nameElement.innerHTML = catName;
+      nameElement.classList.add("yourMatchName");
+
+      rdnBreedContainer2.appendChild(nameElement);
+    }
+    if (data.length > 0) {
+      const imageMatchElement = document.createElement("img");
+      imageMatchElement.src = "img/catlover.jpg";
+      imageMatchElement.alt = "catlover";
+      imageMatchElement.classList.add("yourMatchIsImg");
+
+      rdnBreedContainer3.appendChild(imageMatchElement);
+    }
+    if (data.length > 0) {
+      const yourMatchElement = document.createElement("p");
+      yourMatchElement.innerHTML = "Your Match is...";
+      yourMatchElement.classList.add("yourMatchName");
+
+      rdnBreedContainer4.appendChild(yourMatchElement);
+    }
+  } else {
+    rdnBreedContainer.textContent = "Nenhuma imagem encontrada para essa raça.";
+  }
+}
+
 //! script para a imagem randomica
 
 const url = "https://api.thecatapi.com/v1/images/search";
