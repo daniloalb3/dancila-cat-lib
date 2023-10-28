@@ -11,6 +11,25 @@
   color: #868f3b;
 }
 
+#returnHomeBtn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: none;
+  border-radius: 10px;
+  font-size: 40px;
+  text-decoration: none;
+  align-self: flex-end;
+  margin-top: 820px;
+  margin-right: 50px;
+  z-index: 1000;
+}
+
+#returnHomeBtn a {
+  text-decoration: none;
+}
+
 #logo-home {
   width: 120px;
   padding: 20px;
@@ -37,14 +56,23 @@
   font-size: 19px;
   list-style: none;
   display: inline;
-  padding: 50px;
+  padding: 40px;
+  text-decoration: none;
 }
-.menu-item:hover {
+.menu-item a {
   font-family: "Changa", sans-serif;
-  font-size: 18px;
+  font-size: 19px;
   list-style: none;
   display: inline;
-  padding: 50px;
+  padding: 40px;
+  text-decoration: none;
+}
+.menu-item a:hover {
+  font-family: "Changa", sans-serif;
+  font-size: 19px;
+  list-style: none;
+  display: inline;
+  padding: 40px;
   color: #ff914dd5;
 }
 .logo {
@@ -140,12 +168,19 @@ main {
   z-index: 100;
 }
 
+#breed-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #breedCatImg {
   width: 700px;
   height: 500px;
-  border: 4px solid #ffffffd5;
-  margin-top: 100px;
-  border-radius: 40% 20%;
+  border: 4px solid #ff914dd5;
+  margin-top: 150px;
+  border-radius: 20% 20%;
+  box-shadow: 5px 5px 10px #888888;
 }
 
 #breedBtn {
@@ -156,6 +191,7 @@ main {
   border-color: rgb(238, 209, 197);
   width: 200px;
   height: 50px;
+  margin-top: 30px;
   z-index: 90;
   transition: 1s;
 }
@@ -207,6 +243,7 @@ main {
   z-index: 50;
   align-items: center;
   line-height: 0.5;
+  transition: 1;
 }
 
 #breedSelect {
@@ -229,12 +266,29 @@ main {
   width: 100px;
   height: 30px;
   margin-top: 20px;
+  border: none;
+  background-color: #464444;
+  color: white;
+  border-radius: 20px;
+  transition: 0.8s;
+}
+#findBtn:hover {
+  width: 100px;
+  height: 30px;
+  margin-top: 20px;
+  border: 2px solid #f3aa01;
+  background-color: #f3aa01;
+  color: white;
+  border-radius: 20px;
 }
 
 .imageByBreed {
   width: 600px;
   height: 400px;
   margin-top: 100px;
+  border: 3px solid #f3aa01;
+  box-shadow: 5px 5px 10px #888888;
+  transition: 1s;
 }
 
 #origin {
@@ -243,13 +297,15 @@ main {
   font-size: 18px;
   margin-bottom: 20px;
   margin-top: 20px;
+  font-weight: bold;
 }
 
 .originAdd {
   font-family: "Changa", sans-serif;
   font-size: 18px;
   line-height: 1;
-  background-color: #0000003c;
+  background-color: rgba(33, 31, 31, 0.801);
+  color: white;
   width: 100%;
   height: 20px;
   text-align: center;
@@ -259,7 +315,8 @@ main {
   font-family: "Changa", sans-serif;
   font-size: 18px;
   line-height: 1;
-  background-color: #0000003c;
+  background-color: rgba(33, 31, 31, 0.801);
+  color: white;
   width: 100%;
   height: 20px;
   text-align: center;
@@ -272,14 +329,16 @@ main {
   font-size: 18px;
   margin-bottom: 20px;
   margin-top: 20px;
+  font-weight: bold;
 }
 
 #temperament {
-  width: 600px;
-  height: 30px;
+  width: 500px;
+  height: 50px;
   font-size: 18px;
   margin-bottom: 20px;
   margin-top: 20px;
+  font-weight: bold;
 }
 
 .detalhes {
@@ -292,7 +351,8 @@ main {
   font-family: "Changa", sans-serif;
   font-size: 18px;
   line-height: 1;
-  background-color: #0000003c;
+  background-color: rgba(33, 31, 31, 0.801);
+  color: white;
   width: 100%;
   height: 30px;
   text-align: center;
@@ -310,11 +370,12 @@ main {
   font-family: "Changa", sans-serif;
   font-size: 18px;
   line-height: 1;
-  background-color: #0000003c;
+  background-color: rgba(33, 31, 31, 0.801);
   width: 100%;
   height: 100%;
   text-align: center;
   padding: 10px;
+  color: white;
 }
 
 .sColor {
@@ -328,6 +389,7 @@ main {
   margin-top: 100px;
   border-radius: 50%;
   border: 5px solid #3f382f;
+  box-shadow: 5px 5px 10px #888888;
 }
 
 .yourMatchName {
@@ -342,20 +404,25 @@ main {
   margin: 430px 200px 200px 1150px;
   background-color: #f3aa01;
   color: white;
-  height: 65px;
-  width: 65px;
+  height: 85px;
+  width: 85px;
   border-radius: 50%;
   border: none;
+  transition: 0.8s;
 }
 .heart:hover {
   position: absolute;
   margin: 430px 200px 200px 1150px;
   background-color: #fefefe;
   color: #f3aa01;
-  height: 65px;
-  width: 65px;
+  height: 85px;
+  width: 85px;
   border-radius: 50%;
   border: none;
+}
+
+.module {
+  height: 100px;
 }
 
 section.module:last-child {
@@ -367,7 +434,7 @@ section.module h2 {
 }
 section.module.content {
   padding: px 0;
-  background-color: #ff914d21;
+  background-image: url(img/patas.png);
   text-align: center;
 }
 
@@ -396,7 +463,7 @@ section.module.parallax-1 {
   background-size: cover;
 }
 section.module.parallax-2 {
-  background-image: url("img/bgteste2.png");
+  background-image: url("img/bg22.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -425,4 +492,20 @@ section.module.parallax {
 .area-3 {
   visibility: hidden;
   font-family: "Changa", sans-serif;
+}
+
+#footerContainer {
+  width: 100%;
+  height: 150px;
+  background-color: #000000;
+}
+
+#footerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+  color: white;
 }
