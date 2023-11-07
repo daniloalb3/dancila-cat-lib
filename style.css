@@ -401,18 +401,20 @@ main {
 
 .heart {
   position: absolute;
-  margin: 430px 200px 200px 1150px;
+  margin: 430px 300px 200px 330px;
   background-color: #f3aa01;
   color: white;
   height: 85px;
   width: 85px;
   border-radius: 50%;
   border: none;
-  transition: 0.8s;
+  transition: 1s;
+  z-index: 5555;
 }
+
 .heart:hover {
   position: absolute;
-  margin: 430px 200px 200px 1150px;
+  margin: 430px 300px 200px 330px;
   background-color: #fefefe;
   color: #f3aa01;
   height: 85px;
